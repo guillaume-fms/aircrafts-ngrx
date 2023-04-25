@@ -1,0 +1,38 @@
+<!--<p>aircrafts works!</p>-->
+
+<div class="container mt-4">
+    <ul class="navbar navbar-nav">
+        <li>
+            <button class="btn btn-outline info m-2" (click)="getAllAircrafts()">AirCrafts</button>
+            <button class="btn btn-outline info m-2" (click)="getDesignedAircrafts()">Design</button>
+            <button class="btn btn-outline info m-2" (click)="getDevelopementAircrafts()">Development</button>
+        </li>
+    </ul>
+
+    <ng-container *ngIf="error">
+        <div class="p-2 text-danger"> {{ error }}</div>
+    </ng-container>
+
+    <ng-container *ngIf="aircrafts">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Program</th>
+                    <th>Design</th>
+                    <th>Development</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let aircraft of aircrafts">
+                    <td> {{aircraft.id}}</td>
+                    <td> {{aircraft.prog}}</td>
+                    <td> {{aircraft.design}}</td>
+                    <td> {{aircraft.developpment}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </ng-container>
+</div>
