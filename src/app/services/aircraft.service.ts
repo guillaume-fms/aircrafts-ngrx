@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Aircraft } from '../model/aircraft.model';
-import { environment } from '../../environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root' // Service + accessible dans toute l'appli
@@ -17,7 +17,7 @@ export class AircraftService {
     return this.http.get<Aircraft[]>(host +"/aircrafts");
   }
 
-// liste des avions en phase design
+// liste des avions en phase de design
   public getDesignedAircratfs():Observable<Aircraft[]> {
     return this.http.get<Aircraft[]>(environment.host +"/aircrafts?design=true");
   }
