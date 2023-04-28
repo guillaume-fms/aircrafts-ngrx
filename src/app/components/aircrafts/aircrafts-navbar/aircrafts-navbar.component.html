@@ -1,38 +1,20 @@
-<p>aircrafts-navbar works! quel bor...... </p>
+<p>aircrafts-navbar works! What a mess !</p>
 
-<div class="container mt-4">
-    <ul class="navbar navbar-nav">
+<nav class = "navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
         <li>
-            <button class="btn btn-outline-success ms-5" (click)="getAllAircrafts()">Tous les Avions</button>
-            <button class="btn btn-outline-success ms-5" (click)="getDesignedAircrafts()">Avions en &Eacute;tude</button>
-            <button class="btn btn-outline-success ms-5" (click)="getDevelopementAircrafts()">Avions en Construction</button>
+            <button class="btn btn-outline-info m-3 btn-sm" (click)="getAllAircrafts()">Aircrafts</button>    
+            <button class="btn btn-outline-info m-3 btn-sm" (click)="getDesignAircrafts()">Design</button>
+            <button class="btn btn-outline-info m-3 btn-sm" (click)="getDeveloppementAircrafts()">Development</button>
+        </li>
+    </ul>  
+
+    <ul class="navbar-nav ms-auto">
+        <li>
+            <form class="form-inline">
+                <input type="text" type="search"> 
+                <button type="submit" class="btn btn-outline-warning btn-sm">Search</button>
+            </form>
         </li>
     </ul>
-
-    <ng-container *ngIf="error">
-        <div class="p-2 text-danger"> {{ error }}</div>
-    </ng-container>
-
-    <ng-container *ngIf="aircrafts">
-        <table class="table table-bordered table table-striped">
-            <thead>
-                <tr class="table-info">
-                    <th class="text-center">Id</th>
-                    <th class="text-center">Program</th>
-                    <th class="text-center">Design</th>
-                    <th class="text-center">Development</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr *ngFor="let aircraft of aircrafts">
-                    <td> {{aircraft.id}}</td>
-                    <td> {{aircraft.prog}}</td>
-                    <td> {{aircraft.design}}</td>
-                    <td> {{aircraft.developpment}}</td>
-                </tr>
-            </tbody>
-
-        </table>
-    </ng-container>
-</div>
+</nav>   

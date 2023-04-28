@@ -1,7 +1,8 @@
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-4">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-primary p-4">
+    <img  class="rotationImg" src="assets/img/avions.jpg" width="80" height="80" alt=""> 
     <div class="collapse navbar-collapse" id="mynavbar">
-      <a class="navbar-brand" href="#">AIRBUS</a>
+      <a class="navbar-brand p-4" href="#">AIRBUS</a>
 
 
       <!-- Links --> 
@@ -11,17 +12,7 @@
           <a class="nav-link" routerLink="/aircrafts">AirCrafts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Programs</a>
-        </li>
-      </ul>
-    
-      <ul class="navbar-nav ms-auto">
-        <li>
-            <form class="form-inline">
-                   <input type="text"> 
-                   <button type="submit" class="btn btn-outline-warning btn-ms2"> 
-                   <i class="fa fa-search"></i>Search</button>
-            </form>
+          <a class="nav-link" routerLink="/aircrafts-alert">Alert</a>
         </li>
       </ul>
     </div>
@@ -29,3 +20,5 @@
   </nav>
 
 <router-outlet>Salut Airbus</router-outlet>
+
+  

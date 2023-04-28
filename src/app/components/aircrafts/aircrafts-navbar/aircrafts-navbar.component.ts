@@ -1,40 +1,33 @@
-import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Aircraft } from 'src/app/model/aircraft.model';
-import { AircraftService } from 'src/app/services/aircraft.service';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { GetAllAircraftsAction, GetDesignedAircraftsAction, GetDevelopmentAircraftsAction } from 'src/app/ngrx/aircrafts.action';
+
 
 @Component({
   selector: 'app-aircrafts-navbar',
   templateUrl: './aircrafts-navbar.component.html',
   styleUrls: ['./aircrafts-navbar.component.css']
 })
-export class AircraftsNavbarComponent {
-  aircrafts : Aircraft [] | null = null; // opt1 : un tableau d'avions soit null d'ou l'affectation
-  aircraft$ : Observable<Aircraft[]> | null = null; // opt2 : aircrafts est de type observable contenant des avions
-  // le cigle $ est une convention d'écriture pour indiquer qu'il s'agit d'un observable 
-  error = null;
-
-  constructor(private aircraftService : AircraftService) {}
-
+export class AircraftsNavbarComponent implements OnInit {
+  constructor(private store:Store<any>) { //injection du store en spécifiant ou pas le type du state
+  }
+  ngOnInit(): void {
+  }
   getAllAircrafts(){
-    /* Option1 : nous observons ici ce qui se passe lorsqu'on déclenche l'évènement : récupérer la liste
-     d'avions en base de données */
-   this.aircraftService.getAircrafts().subscribe ({
-     next : (data) => this.aircrafts = data,
-     error : (err) => this.error = err.message,
-     complete : () => this.error = null })
-
-    // this.aircraft$ = this.aircraftService.getAircrafts(); // delors il faut bien faire un subscribe puisqu'il n'est plus sollicité ici
-     // en effet, l'appel sera fait côté html en précisant (pipe)" | async" toujours pour agir lorsque les données arrivent
-
-
-
-   }
+    //User a cliqué sur le bouton afficher tous les produits aussi il faut dispatcher l'action à l'aide du store
+    this.store.dispatch(new GetAllAircraftsAction({}));
+    //Le reducer et l'effect ont reçu la notification du Store et ils ont pris le relais chacun de son côté 
+    console.log('toto');  
+  }
+  
+  getDesignAircrafts(){
+    this.store.dispatch(new GetDesignedAircraftsAction({}));
    
-   getDesignedAircrafts(){}
-   
-   
-   getDevelopementAircrafts() {}
-   
+  }
+
+  getDeveloppementAircrafts(){
+    this.store.dispatch(new GetDevelopmentAircraftsAction({}));
+  
+  }
 
 }

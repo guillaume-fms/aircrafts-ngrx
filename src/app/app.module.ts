@@ -9,6 +9,9 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AircraftsAlertComponent } from './components/aircrafts-alert/aircrafts-alert.component';
+import { FormsModule } from '@angular/forms';
+import { AircraftsReducer } from './ngrx/aircrafts.reducer';
+import { AircraftsEffects } from './ngrx/aircrafts.effects';
 
 @NgModule({
   declarations: [
@@ -22,8 +25,9 @@ import { AircraftsAlertComponent } from './components/aircrafts-alert/aircrafts-
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({}),  // spécifier le reducer
-    EffectsModule.forRoot(), // spécifier les effects
+    FormsModule,
+    StoreModule.forRoot({airbusState : AircraftsReducer}),  // spécifier le reducer
+    EffectsModule.forRoot([AircraftsEffects]), // spécifier les effects
     StoreDevtoolsModule.instrument() // en l'activant ici, à chaque action de NgRx dans l'appli
   ],                                 // le plugin redux (chrome) permet l'analyse du state durant le dev
   

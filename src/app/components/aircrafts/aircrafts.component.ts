@@ -1,4 +1,4 @@
-import { Component, OnInit, ɵsetAllowDuplicateNgModuleIdsForTest } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, map } from 'rxjs';
 import { AircraftsState, AircraftsStateEnum } from 'src/app/ngrx/aircrafts.state';
@@ -16,7 +16,7 @@ export class AircraftsComponent implements OnInit {
   
   ngOnInit(): void {  // avant tout, notre composant doit faire un pipe vers le store
     this.aircraftsState$ = this.store.pipe( // on écoute ce qui se passe dans le store, dès qu'on reçoit les données, on peut faire 
-    // un map, autrement dit : nous recevons le state dès qu'il change afin de permetre l'affichage adéquat de ses données
+    // un map, autrement dit : nous recevons le state dès qu'il change afin de permettre l'affichage adéquat de ses données
     map((state) => state.airbusState)
     );
   }
