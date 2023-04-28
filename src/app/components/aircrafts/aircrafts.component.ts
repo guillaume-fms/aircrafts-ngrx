@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, map } from 'rxjs';
+import { selectCountAlertAircrafts } from 'src/app/ngrx/aircrafts.selectors';
 import { AircraftsState, AircraftsStateEnum } from 'src/app/ngrx/aircrafts.state';
 
 
@@ -12,7 +13,11 @@ import { AircraftsState, AircraftsStateEnum } from 'src/app/ngrx/aircrafts.state
 export class AircraftsComponent implements OnInit {
   aircraftsState$:Observable<AircraftsState> | null = null; 
   readonly aircraftsStateEnum = AircraftsStateEnum;
-  constructor(private store : Store<any>) {}
+  countAlertAircrafts$ : Observable<number> | undefined;
+
+  constructor(private store : Store<any>) {
+    this.countAlertAircrafts$ = store.select(selectCountAlertAircrafts);
+  }
   
   ngOnInit(): void {  // avant tout, notre composant doit faire un pipe vers le store
     this.aircraftsState$ = this.store.pipe( // on écoute ce qui se passe dans le store, dès qu'on reçoit les données, on peut faire 

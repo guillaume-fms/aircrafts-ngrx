@@ -13,7 +13,7 @@ export class AircraftsAlertComponent {
 
 
   constructor(private store: Store<any>) {
-    
+   
   }
 
   ngOnInit(): void {}

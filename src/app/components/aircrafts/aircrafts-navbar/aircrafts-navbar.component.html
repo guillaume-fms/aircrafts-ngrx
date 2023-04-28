@@ -1,20 +1,31 @@
-<p>aircrafts-navbar works! What a mess !</p>
+<p>aircrafts-navbar works ! What a mess !</p>
 
 <nav class = "navbar navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
         <li>
             <button class="btn btn-outline-info m-3 btn-sm" (click)="getAllAircrafts()">Aircrafts</button>    
             <button class="btn btn-outline-info m-3 btn-sm" (click)="getDesignAircrafts()">Design</button>
-            <button class="btn btn-outline-info m-3 btn-sm" (click)="getDeveloppementAircrafts()">Development</button>
+            <button class="btn btn-outline-info m-3 btn-sm" (click)="getDevelopementAircrafts()">Development</button>
         </li>
     </ul>  
 
     <ul class="navbar-nav ms-auto">
-        <li>
-            <form class="form-inline">
-                <input type="text" type="search"> 
-                <button type="submit" class="btn btn-outline-warning btn-sm">Search</button>
+
+        <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-        </li>
+          </div>
+        
+
+
+        <!-- <li>
+            <form class="d-flex" role="search">
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit">Search</button>
+              </form>
+        
+        </li> -->
     </ul>
 </nav>   

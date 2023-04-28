@@ -25,7 +25,7 @@ export class AircraftsNavbarComponent implements OnInit {
    
   }
 
-  getDeveloppementAircrafts(){
+  getDevelopementAircrafts(){
     this.store.dispatch(new GetDevelopmentAircraftsAction({}));
   
   }

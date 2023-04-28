@@ -4,7 +4,6 @@
     border-radius: 3%;
 }
 
-
 .rotationImg {
     -webkit-animation: spin 10s linear infinite;
     -moz-animation: spin 10s linear infinite;
@@ -15,7 +14,14 @@
 /* Permet de définir les étapes qui composent la séquence d'une animation CSS. */
 @keyframes spin {
     100% {
-        -webkit-transform: rotateX(360deg);
-        transform: rotateX(360deg);
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
     }
+}
+
+a {
+    font-size: 22px;
+    font-family: "Roboto", serif;
+    font-style: normal;
+    color: burlywood;
 }
