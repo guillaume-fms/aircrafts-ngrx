@@ -22,12 +22,10 @@ export class AircraftsNavbarComponent implements OnInit {
   
   getDesignAircrafts(){
     this.store.dispatch(new GetDesignedAircraftsAction({}));
-   
   }
 
   getDevelopementAircrafts(){
     this.store.dispatch(new GetDevelopmentAircraftsAction({}));
-  
   }
 
 }

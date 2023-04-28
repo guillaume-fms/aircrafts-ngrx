@@ -1,7 +1,8 @@
 .rotationImg {
-    width: 80px;
+    width: 98px;
     float: right;
-    border-radius: 3%;
+    border-radius: 4%;
+    border: crimson solid;
 }
 
 .rotationImg {

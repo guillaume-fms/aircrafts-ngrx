@@ -1,5 +1,6 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 import { AircraftsState } from "./aircrafts.state";
+import { Aircraft } from "../model/aircraft.model";
 
 
 
@@ -14,3 +15,20 @@ export const selectCountAlertAircrafts = createSelector(
       return total;
     }
   );
+
+  export const selectAlertAircrafts = createSelector(
+    createFeatureSelector('airbusState'),
+    (state: AircraftsState) => {
+      let Aircraft: { add: () => void; } ;
+      state.aircrafts.forEach(a =>
+        {
+          if (a.development == true && a.design == true)Aircraft.add();
+        })
+        //console.log(Aircrafts);
+        return;
+    }
+
+  );
+
+   
+    
