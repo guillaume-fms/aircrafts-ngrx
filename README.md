@@ -1,5 +1,6 @@
 # AirbusAppNgrx
-/* Exos Angular_NgRx semaine du 25 Avril 2023 */.
+/* Exos Angular_NgRx semaine du 25 Avril 2023 aux vacances Mai 2023 */
+
 This project was generated with Angular CLI version 15.2.5.
 
 ## Immersion sur NgRx
