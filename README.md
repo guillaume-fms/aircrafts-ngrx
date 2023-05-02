@@ -25,8 +25,11 @@ Ensuite et dans l’ordre, vous devez :
 
 Pour ce faire, il faut installer les dépendances :
     ● npm install @ngrx/store
+    
     ● npm install @ngrx/effects
+    
     ● npm install @ngrx/store-devtools
+    
 Ajouter les 3 modules dans app.module
 
 Ajouter un dossier ngrx et nos fichiers :
