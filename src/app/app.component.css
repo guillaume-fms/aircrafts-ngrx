@@ -1,8 +1,10 @@
 .rotationImg {
-    width: 98px;
+    width: 130px;
     float: right;
-    border-radius: 4%;
-    border: crimson solid;
+    border-radius: 100%;
+    /*border: crimson solid;*/
+    clip-path:ellipse(53% 50%);
+
 }
 
 .rotationImg {
@@ -26,3 +28,4 @@ a {
     font-style: normal;
     color: burlywood;
 }
+

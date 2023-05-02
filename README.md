@@ -1,28 +1,35 @@
 # AirbusAppNgrx
 /* Exos Angular_NgRx semaine du 25 Avril 2023 */.
+This project was generated with Angular CLI version 15.2.5.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+## Immersion sur NgRx
 
-## Development server
+Après avoir digérer la masterclass « Angular-NgRx » vous devez préparer une présentation
+sur NgRx à votre sauce de sorte que vous vous appropriez la librairie usant de tous les outils
+pédagogiques à votre disposition (masterclass, ressources web, magic chart...)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Ensuite et dans l’ordre, vous devez :
 
-## Code scaffolding
+    - Réaliser le projet airbus-ngrx-app.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    - Ajouter un formulaire d’authentification permettant aux seuls utilisateurs en base
+    d’avoir accès à l’appli, attention il faut utiliser NgRx et pas faire d’écart.
 
-## Build
+    - Ajouter à l’application la fonctionnalité de gestion de configuration d’un avion,
+    permettant de personnaliser un avion avec une ou plusieurs options, n’hésitez à
+    utiliser les diagrammes Uml. De même, une maquette de cette nouvelle fonctionnalité
+    doit être fournie.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Exploitation de NgRx
 
-## Running unit tests
+Pour ce faire, il faut installer les dépendances :
+    ● npm install @ngrx/store
+    ● npm install @ngrx/effects
+    ● npm install @ngrx/store-devtools
+Ajouter les 3 modules dans app.module
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ajouter un dossier ngrx et nos fichiers :
+     State, Actions, Effects, Reducer
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Entity
+    npm install @ngrx/entity --save

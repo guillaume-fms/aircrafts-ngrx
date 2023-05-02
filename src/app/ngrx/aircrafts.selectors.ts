@@ -19,13 +19,15 @@ export const selectCountAlertAircrafts = createSelector(
   export const selectAlertAircrafts = createSelector(
     createFeatureSelector('airbusState'),
     (state: AircraftsState) => {
-      let Aircraft: { add: () => void; } ;
+      let aircrafts : Aircraft[] = new Array<Aircraft>();
       state.aircrafts.forEach(a =>
         {
-          if (a.development == true && a.design == true)Aircraft.add();
-        })
-        //console.log(Aircrafts);
-        return;
+          if (a.development == true && a.design == true){
+            aircrafts.push(a);  // La méthode push() ajoute un ou plusieurs éléments à la fin d'un tableau 
+          }
+        });
+        //console.log(aircrafts);
+        return aircrafts;
     }
 
   );
