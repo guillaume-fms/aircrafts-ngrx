@@ -1,14 +1,81 @@
 {
-    "aircrafts":[
-        {"id":1, "prog":"A350", "design": true, "development": false},
-        {"id":2, "prog":"A320", "design": false, "development": true},
-        {"id":3, "prog":"A380", "design": true, "development": true},
-        {"id":4, "prog":"A400M", "design": false, "development": false},
-        {"id":5, "prog":"A330", "design": true, "development": true},
-        {"id":6, "prog":"A350Neo", "design": false, "development": true},
-        {"id":7, "prog":"Beluga", "design": true, "development": true},
-        {"id":8, "prog":"A320Neo", "design": true, "development": false},
-        {"id":9, "prog":"H130", "design": false, "development": false},
-        {"id":10, "prog":"H175", "design": false, "development": true}
+    "aircrafts": [
+        {
+            "id": 1,
+            "prog": "A350",
+            "design": true,
+            "development": false
+        },
+        {
+            "id": 2,
+            "prog": "A320",
+            "design": false,
+            "development": true
+        },
+        {
+            "id": 3,
+            "prog": "A380",
+            "design": true,
+            "development": true
+        },
+        {
+            "id": 4,
+            "prog": "A400M",
+            "design": false,
+            "development": false
+        },
+        {
+            "id": 5,
+            "prog": "A330",
+            "design": true,
+            "development": false
+        },
+        {
+            "id": 6,
+            "prog": "A350Neo",
+            "design": false,
+            "development": true
+        },
+        {
+            "id": 7,
+            "prog": "Beluga",
+            "design": true,
+            "development": true
+        },
+        {
+            "id": 8,
+            "prog": "A320Neo",
+            "design": true,
+            "development": false
+        },
+        {
+            "id": 9,
+            "prog": "H130",
+            "design": false,
+            "development": false
+        },
+        {
+            "id": 10,
+            "prog": "H175",
+            "design": true,
+            "development": true
+        }
+    ],
+    "users": [
+        {
+            "email": "guipas31@gmail.com",
+            "password": "1234",
+            "roles": [
+                "ADMIN",
+                "USER"
+            ]
+        },
+        {
+            "email": "rogerH@free.fr",
+            "password": "123ro",
+            "roles": [
+                "USER"
+            ]
+        }
     ]
 }

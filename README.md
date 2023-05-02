@@ -17,13 +17,14 @@ Ensuite et dans l’ordre, vous devez :
     d’avoir accès à l’appli, attention il faut utiliser NgRx et pas faire d’écart.
 
     - Ajouter à l’application la fonctionnalité de gestion de configuration d’un avion,
-    permettant de personnaliser un avion avec une ou plusieurs options, n’hésitez à
+    permettant de personnaliser un avion avec une ou plusieurs options, n’hésitez pas à
     utiliser les diagrammes Uml. De même, une maquette de cette nouvelle fonctionnalité
     doit être fournie.
 
 ### Exploitation de NgRx
 
 Pour ce faire, il faut installer les dépendances :
+
     ● npm install @ngrx/store
     
     ● npm install @ngrx/effects
@@ -33,6 +34,7 @@ Pour ce faire, il faut installer les dépendances :
 Ajouter les 3 modules dans app.module
 
 Ajouter un dossier ngrx et nos fichiers :
+
      State, Actions, Effects, Reducer
 
 Entity

@@ -12,13 +12,17 @@ import { AircraftsAlertComponent } from './components/aircrafts-alert/aircrafts-
 import { FormsModule } from '@angular/forms';
 import { AircraftsReducer } from './ngrx/aircrafts.reducer';
 import { AircraftsEffects } from './ngrx/aircrafts.effects';
+import { AuthenticformComponent } from './components/authenticform/authenticform.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AircraftsComponent,
     AircraftsNavbarComponent,
-    AircraftsAlertComponent
+    AircraftsAlertComponent,
+    AuthenticformComponent,
+
   ],
 
   imports: [

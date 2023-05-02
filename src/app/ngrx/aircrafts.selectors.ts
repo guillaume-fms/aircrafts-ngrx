@@ -26,7 +26,6 @@ export const selectCountAlertAircrafts = createSelector(
             aircrafts.push(a);  // La méthode push() ajoute un ou plusieurs éléments à la fin d'un tableau 
           }
         });
-        //console.log(aircrafts);
         return aircrafts;
     }
 
