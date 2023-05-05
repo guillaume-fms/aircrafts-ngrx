@@ -35,6 +35,6 @@ export class AircraftsNavbarComponent implements OnInit {
 
   searchAircraft(name :string){
     this.store.dispatch(new SearchAircraftsAction(this.search));
-   console.log(this.search);
+   /*console.log(this.search);*/
   }
 }

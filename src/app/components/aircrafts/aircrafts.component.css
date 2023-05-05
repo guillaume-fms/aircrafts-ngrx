@@ -3,3 +3,10 @@ thead {
     font-family: "Roboto", serif;
     font-size: 20px;
 }
+
+.title {
+    font-family: "Roboto", serif;
+    font-size: 30px;
+    font-style: bold;
+    color: rgb(3, 85, 99);
+}

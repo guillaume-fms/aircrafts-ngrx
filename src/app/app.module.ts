@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AircraftsReducer } from './ngrx/aircrafts.reducer';
 import { AircraftsEffects } from './ngrx/aircrafts.effects';
 import { AuthenticformComponent } from './components/authenticform/authenticform.component';
+import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AuthenticformComponent } from './components/authenticform/authenticform
     AircraftsNavbarComponent,
     AircraftsAlertComponent,
     AuthenticformComponent,
+    UserComponent,
 
   ],
 
