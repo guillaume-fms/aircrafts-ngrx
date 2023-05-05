@@ -3,6 +3,10 @@
 
 This project was generated with Angular CLI version 15.2.5.
 
+
+![avions - Copie](https://user-images.githubusercontent.com/90391689/236433604-feb42fb8-9e3c-48ca-8d53-6c84423ad979.jpg)
+
+
 ## Immersion sur NgRx
 
 Après avoir digérer la masterclass « Angular-NgRx » vous devez préparer une présentation
@@ -38,4 +42,5 @@ Ajouter un dossier ngrx et nos fichiers :
      State, Actions, Effects, Reducer
 
 Entity
-    npm install @ngrx/entity --save
+
+    ● npm install @ngrx/entity --save
