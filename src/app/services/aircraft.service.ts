@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AircraftService {
 
+
   constructor(private http:HttpClient) { }
 
 // liste de tous les avions en base => une fois sur 2 on souhaite provoquer une erreur
@@ -32,7 +33,9 @@ export class AircraftService {
     return this.http.get<Aircraft>(environment.host + "/aircrafts/" + id);
   }
 
-//renvoi des avions avec le mot clé
 
-
+  public searchAircrafts(name:any) : Observable<Aircraft[]> {
+    return this.http.get<Aircraft[]>(environment.host + "/aircrafts?prog_like=" + name);
+  
+  }
 }

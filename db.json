@@ -59,12 +59,24 @@
             "prog": "H175",
             "design": true,
             "development": true
+        },
+        {
+            "id": 11,
+            "prog": "AS532",
+            "design": false,
+            "development": false
+        },
+        {
+            "id": 12,
+            "prog": "HH-65 Dolphin",
+            "design": false,
+            "development": true
         }
     ],
     "users": [
         {
             "email": "guipas31@gmail.com",
-            "password": "1234",
+            "password": "12345",
             "roles": [
                 "ADMIN",
                 "USER"

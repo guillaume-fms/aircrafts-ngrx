@@ -1,6 +1,6 @@
 <p>aircrafts-navbar works ! What a mess !</p>
 
-<nav class = "navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class = "search-container">
     <ul class="navbar-nav">
         <li>
             <button class="btn btn-outline-info m-3 btn-sm" (click)="getAllAircrafts()">AirCrafts</button>    
@@ -10,15 +10,15 @@
     </ul>  
 
     <ul class="navbar-nav ms-auto">
-
-        <div class="container-fluid">
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-        
-
+        <div class="container">
+            <div class="search-plane">
+                <form  #f="ngForm" (ngSubmit)="searchAircraft(search)" class="d-flex">
+                    <input class="form-control me-2" name="search" [(ngModel)]="search" placeholder="? Searching for planes ............."
+                     aria-label="Search">
+                    <button class="btn btn-outline-warning me-2" type="submit">Search</button>
+                  </form>
+            </div>    
+        </div>        
     </ul>
 </nav>   
 

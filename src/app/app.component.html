@@ -1,6 +1,6 @@
 
   <nav class="navbar navbar-expand-sm bg-success navbar-success p-3">
-    <img  class="rotationImg" src="assets/img/avions.jpg" width="80" height="80" alt=""> 
+    <img  class="rotationImg" src="assets/img/avions.jpg" width="65" height="65" alt=""> 
     <div class="collapse navbar-collapse" id="mynavbar">
       <a class="navbar-brand p-3" href="#">AIRBUS</a>
 
@@ -24,7 +24,11 @@
     </div>
 
   </nav>
-
+  
 <router-outlet>Salut Airbus</router-outlet>
 
-  
+
+<div class="footer fixed-bottom">
+  <p>AIRBUS &middot; App &middot; NgRx</p>
+  <footer>&copy;FMS-EA Academy by <b>GuillaumeP</b> {{  dateDuJour | date:'medium' }} </footer>
+</div>

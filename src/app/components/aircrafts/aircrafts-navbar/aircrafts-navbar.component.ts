@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { GetAllAircraftsAction, GetDesignedAircraftsAction, GetDevelopmentAircraftsAction } from 'src/app/ngrx/aircrafts.action';
+import { GetAllAircraftsAction, GetDesignedAircraftsAction, GetDevelopmentAircraftsAction, SearchAircraftsAction } from 'src/app/ngrx/aircrafts.action';
 
 
 @Component({
@@ -9,6 +10,10 @@ import { GetAllAircraftsAction, GetDesignedAircraftsAction, GetDevelopmentAircra
   styleUrls: ['./aircrafts-navbar.component.css']
 })
 export class AircraftsNavbarComponent implements OnInit {
+ name!: string ;
+ search!: string;
+  form!: NgForm;
+
   constructor(private store:Store<any>) { //injection du store en spécifiant ou pas le type du state
   }
   ngOnInit(): void {
@@ -28,4 +33,8 @@ export class AircraftsNavbarComponent implements OnInit {
     this.store.dispatch(new GetDevelopmentAircraftsAction({}));
   }
 
+  searchAircraft(name :string){
+    this.store.dispatch(new SearchAircraftsAction(this.search));
+   console.log(this.search);
+  }
 }

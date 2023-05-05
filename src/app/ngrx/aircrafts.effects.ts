@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { AircraftService } from "../services/aircraft.service";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { Observable, catchError } from "rxjs";
-import { AircraftsActions, AircraftsActionsTypes, GetAllAircraftsActionError, GetAllAircraftsActionSuccess, GetDesignedAircraftsActionError, GetDesignedAircraftsActionSuccess } from "./aircrafts.action";
+import { AircraftsActions, AircraftsActionsTypes, GetAllAircraftsActionError, GetAllAircraftsActionSuccess, GetDesignedAircraftsActionError, GetDesignedAircraftsActionSuccess, SearchAircraftsActionError, SearchAircraftsActionSuccess } from "./aircrafts.action";
 import { mergeMap, map, of } from "rxjs";
 
 
@@ -51,9 +51,18 @@ export class AircraftsEffects {
                     catchError((err) => of(new GetDesignedAircraftsActionError(err.message)))
                 )
             })
-
         )
     );
 
+    searchAircraftsEffect: Observable<AircraftsActions> = createEffect(
+        () => this.effectActions.pipe(
+            ofType(AircraftsActionsTypes.SEARCH_AIRCRAFTS),
+            mergeMap((action: AircraftsActions) => {
+                return this.aircraftService.searchAircrafts(action.payload).pipe(
+                    map((aircrafts) => new SearchAircraftsActionSuccess(aircrafts)),
+                    catchError((err) => of(new SearchAircraftsActionError(err.message)))
+                )
+            })
+        )
+    );
 }
-
