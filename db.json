@@ -73,6 +73,7 @@
             "development": true
         }
     ],
+    
     "users": [
         {
             "email": "guipas31@gmail.com",
@@ -90,4 +91,5 @@
             ]
         }
     ]
+
 }
