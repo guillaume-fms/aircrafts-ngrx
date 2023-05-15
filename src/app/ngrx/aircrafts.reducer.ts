@@ -16,8 +16,7 @@ export function AircraftsReducer(state: AircraftsState = initState, action: Acti
 
         case AircraftsActionsTypes.GET_ALL_AIRCRAFTS_ERROR:
             return { ...state, dataState: AircraftsStateEnum.ERROR, errorMessage: (<AircraftsActions>action).payload }
-        default:
-            return { ...state }
+        
 
         // Get Designed Aircrafts
         case AircraftsActionsTypes.GET_DESIGNED_AIRCRAFTS:
@@ -43,6 +42,7 @@ export function AircraftsReducer(state: AircraftsState = initState, action: Acti
         case AircraftsActionsTypes.SEARCH_AIRCRAFTS_ERROR:
             return { ...state, dataState: AircraftsStateEnum.ERROR, errorMessage: (<AircraftsActions>action).payload }
 
-
+            default:
+                return { ...state }
     }
 }

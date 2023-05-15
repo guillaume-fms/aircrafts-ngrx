@@ -33,7 +33,7 @@ export class AircraftService {
     return this.http.get<Aircraft>(environment.host + "/aircrafts/" + id);
   }
 
-
+// rechercher les avions
   public searchAircrafts(name:any) : Observable<Aircraft[]> {
     return this.http.get<Aircraft[]>(environment.host + "/aircrafts?prog_like=" + name);
   
