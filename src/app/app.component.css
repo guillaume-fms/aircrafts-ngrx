@@ -1,5 +1,5 @@
 .rotationImg {
-    width: 190px;
+    width: 198px;
     float: right;
     border-radius: 100%;
     /*border: crimson solid;*/
@@ -23,7 +23,7 @@
 }
 
 a {
-    font-size: 22px;
+    font-size: 24px;
     font-family: "Roboto", serif;
     font-style: normal;
     color: burlywood;

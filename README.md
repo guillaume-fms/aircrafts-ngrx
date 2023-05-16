@@ -44,3 +44,27 @@ Ajouter un dossier ngrx et nos fichiers :
 Entity
 
     ● npm install @ngrx/entity --save
+
+
+#### Install Angular :
+
+    ● npm install -g @angular
+
+    Ajout des dépendances front et back
+
+    ● front : npm install bootstrap
+
+        Modif fichier "Angular.json"
+         "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+
+    ● Back : npm install json-server concurrently
+
+        Modif fichier “Package.json”
+         "start": "concurrently \"ng serve\" \"json-server --watch db.json\"",
+
+        Ajout d’une base de donnée “db.json” à la racine du projet
+
+        Tester en lançant l’appli : npm start

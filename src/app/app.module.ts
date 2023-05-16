@@ -12,8 +12,8 @@ import { AircraftsAlertComponent } from './components/aircrafts-alert/aircrafts-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AircraftsReducer } from './ngrx/aircrafts.reducer';
 import { AircraftsEffects } from './ngrx/aircrafts.effects';
-import { AuthenticformComponent } from './components/authenticform/authenticform.component';
 import { UserComponent } from './components/user/user.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -22,8 +22,8 @@ import { UserComponent } from './components/user/user.component';
     AircraftsComponent,
     AircraftsNavbarComponent,
     AircraftsAlertComponent,
-    AuthenticformComponent,
     UserComponent,
+    LoginComponent,
 
   ],
 
